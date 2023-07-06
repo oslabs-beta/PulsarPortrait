@@ -12,6 +12,7 @@ import Navbar from './client/components/Navbar'
 const App = () => {
   return (
     <div className='AppDisplay'>
+      
        <div className='Navbar'> <Navbar /> </div>
        <div className='Body'> <Body /> </div> 
     </div>

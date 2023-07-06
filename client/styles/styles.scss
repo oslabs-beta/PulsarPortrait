@@ -6,9 +6,10 @@
     box-sizing: border-box;
 }
 body {
-    // background-color: grey;
-    background-image: url("../assets/space.jpg");
+    background-color: grey;
+    background-image: url("https://media.discordapp.net/attachments/1086022677422153820/1125576700042948709/puggo_an_image_in_the_style_of_a_graphic_designer_of_four_infor_1227d67b-eec8-460a-8d0e-35c0a7c029bc.png?width=1138&height=1138");
 }
+
 .AppDisplay {
     margin: 2.5rem;
     display: flex;
@@ -43,8 +44,9 @@ body {
     // border: 1px solid blue;
     height: 90vh;
     width: 99vw;
-    background-color: brown;
-    border-radius: 5px;
+    background-color: rgb(60, 60, 60);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .DisplayContainer {
@@ -57,7 +59,7 @@ body {
 }
 
 .Graph {
-    background-color: maroon;
+    // background-color: maroon;
     // display: flex;
     flex-grow: 1;
     border-radius: 5px;
@@ -87,4 +89,9 @@ body {
     border-radius: 5px;
 }
 
+.chart {
+    height: 20vh;
+    width: 90vw;
+    border-radius: 8px;
+}
 // testing github account change
