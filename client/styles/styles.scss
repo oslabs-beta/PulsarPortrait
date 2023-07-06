@@ -44,8 +44,9 @@ body {
     // border: 1px solid blue;
     height: 90vh;
     width: 99vw;
-    background-color: brown;
-    border-radius: 5px;
+    background-color: rgb(60, 60, 60);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .DisplayContainer {
@@ -58,7 +59,7 @@ body {
 }
 
 .Graph {
-    background-color: maroon;
+    // background-color: maroon;
     // display: flex;
     flex-grow: 1;
     border-radius: 5px;
