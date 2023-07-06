@@ -1,20 +1,39 @@
 @import '_example';
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Geologica:wght@300&family=Manrope:wght@300&family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: grey;
-    background-image: url("https://media.discordapp.net/attachments/1086022677422153820/1125576700042948709/puggo_an_image_in_the_style_of_a_graphic_designer_of_four_infor_1227d67b-eec8-460a-8d0e-35c0a7c029bc.png?width=1138&height=1138");
-}
 
-#main {
+#heading {
     color: white;
     text-align: center;
+    margin-bottom: 0px;
+    font-size: 50pt;
 }
 
+body {
+    background-color: grey;
+    font-family: 'Russo One', sans-serif;
+    // background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1678120729579339650/40A46978EF29C7099912D8CA459BBC9FAC764F2E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false");
+    background-image: url("https://media.discordapp.net/attachments/1120822627880144916/1126580577835954176/puggo_blue_and_purple_colored_background_with_purple_and_blue_l_0b542b64-a0ac-4990-8ccb-e3d89df2bc6a.png?width=1798&height=1008");
+    // background-repeat: no-repeat;
+    // background-position: 50% 50%;
+    // image-rendering: pixelated;
+    // background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    // background-image: url("https://media.discordapp.net/attachments/1086022677422153820/1125576700042948709/puggo_an_image_in_the_style_of_a_graphic_designer_of_four_infor_1227d67b-eec8-460a-8d0e-35c0a7c029bc.png?width=1138&height=1138");
+}
+
+#root {
+    margin-top: 0px;
+}
 .AppDisplay {
     margin: 2.5rem;
     display: flex;
@@ -22,7 +41,6 @@ body {
     // border: 1px solid black;
     min-height: 90vh;
     width: 95vw;
-    background-color: purple;
     border-radius: 5px;
 }
 
@@ -32,15 +50,26 @@ body {
     // border: 1px solid green;
     background-color: purple;
     border-radius: 5px;
-    width: 5rem;
+    // width: 5rem;
     .NavButtons {
         color: white;
         padding: 5px;
-        size: 35;
+        margin-bottom: 10px;
+        margin-top: 5px;
     }
     .NavButtons:hover {
         background-color: rgba(158, 98, 190, 0.686);
         cursor: pointer;
+    }
+    svg:hover {
+        width: 2.5rem;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+    svg:hover {
+        width: 2.5rem;
+        cursor: pointer;
+        border-radius: 6px;
     }
 }
 
@@ -50,7 +79,8 @@ body {
     // border: 1px solid blue;
     height: 90vh;
     width: 99vw;
-    background-color: rgb(60, 60, 60);
+    // background-color: rgb(60, 60, 60);
+    background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(50, 25, 83) 101.8%); 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -74,7 +104,8 @@ body {
     color: white;
     margin: 1rem;
     height: 8vh;
-    width: 90vw
+    width: 90vw;
+    overflow-y: hidden;
 }
 
 #HomeButton {
@@ -89,6 +120,13 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-width: 3rem;
+    // background: radial-gradient(circle at 24.1% 68.8%, rgb(24, 24, 24) 0%, rgb(0, 0, 0) 99.4%);
+    background: radial-gradient(circle at 15% 25%, rgb(66, 66, 66) 0%, rgb(30, 30, 30) 99.4%);
+
+    // background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
 }
 
 .Display {
@@ -99,5 +137,6 @@ body {
     height: 20vh;
     width: 90vw;
     border-radius: 8px;
+    overflow-x: hidden;
 }
 // testing github account change
