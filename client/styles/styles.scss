@@ -10,6 +10,11 @@ body {
     background-image: url("https://media.discordapp.net/attachments/1086022677422153820/1125576700042948709/puggo_an_image_in_the_style_of_a_graphic_designer_of_four_infor_1227d67b-eec8-460a-8d0e-35c0a7c029bc.png?width=1138&height=1138");
 }
 
+#main {
+    color: white;
+    text-align: center;
+}
+
 .AppDisplay {
     margin: 2.5rem;
     display: flex;
@@ -35,6 +40,7 @@ body {
     }
     .NavButtons:hover {
         background-color: rgba(158, 98, 190, 0.686);
+        cursor: pointer;
     }
 }
 
