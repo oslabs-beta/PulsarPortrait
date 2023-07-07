@@ -25,23 +25,28 @@ body {
     // background-position: 50% 50%;
     // image-rendering: pixelated;
     // background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    // height: 100vh;
+    // width: 100vw;
 
     // background-image: url("https://media.discordapp.net/attachments/1086022677422153820/1125576700042948709/puggo_an_image_in_the_style_of_a_graphic_designer_of_four_infor_1227d67b-eec8-460a-8d0e-35c0a7c029bc.png?width=1138&height=1138");
 }
 
 #root {
     margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .AppDisplay {
-    margin: 2.5rem;
+    // margin: 2.5rem;
     display: flex;
     flex-direction: row;
     // border: 1px solid black;
-    min-height: 90vh;
-    width: 95vw;
+    // min-height: 90vh;
+    // width: 95vw;
+    width: 95%;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .Navbar {
@@ -71,9 +76,10 @@ body {
     display: flex;
     flex-direction: row;
     // border: 1px solid blue;
-    height: 90vh;
-    width: 99vw;
+    // height: 90vh;
+    // width: 99vw;
     // background-color: rgb(60, 60, 60);
+    width: 100%;
     background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(50, 25, 83) 101.8%); 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -84,8 +90,12 @@ body {
     flex-direction: column;
     // align-items: center;
     justify-content: space-between;
-    height: 90vh;
+    // height: 90vh;
+    gap: 2rem;
     border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    // border: 2px solid pink;
 }
 
 .Graph {
@@ -96,10 +106,12 @@ body {
     // display: grid;
     // grid-row: auto;
     color: white;
-    margin: 1rem;
-    height: 8vh;
-    width: 90vw;
-    overflow-y: hidden;
+    // margin: 1rem;
+    // height: 8vh;
+    // width: 90vw;
+    // width: 90%;
+    // border: 2px solid white;
+    // overflow-y: hidden;
 }
 
 #HomeButton {
@@ -116,7 +128,7 @@ body {
     align-items: center;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    min-width: 3rem;
+    // min-width: 3rem;
     // background: radial-gradient(circle at 24.1% 68.8%, rgb(24, 24, 24) 0%, rgb(0, 0, 0) 99.4%);
     background: radial-gradient(circle at 15% 25%, rgb(66, 66, 66) 0%, rgb(30, 30, 30) 99.4%);
 
@@ -125,12 +137,16 @@ body {
 
 .Display {
     border-radius: 5px;
+    // border: 2px solid greenyellow;
+    width: 100%;;
 }
 
 .chart {
-    height: 20vh;
-    width: 90vw;
+    // height: 20vh;
+    // width: 90vw;
+    height: 300px;
+    width: 100%;
     border-radius: 8px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 // testing github account change
