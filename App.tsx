@@ -8,13 +8,17 @@ import Navbar from './client/components/Navbar';
 // }
 
 // async function getTopics() {
+//   try{
 //   const result = await fetch(
 //     'http://localhost:8080/admin/v2/persistent/public/default',
-//     {
-//       mode: 'no-cors',
-//     }
 //   );
-//   console.log(result);
+//   if(!result.ok){
+//     console.log("Error retrieving topics");
+//     return
+//   }
+//   const data = await result.json();
+//   const topics = data.topics;
+//   console.log('Topics:', topics)
 // }
 // getTopics();
 // async function getTopics() {
