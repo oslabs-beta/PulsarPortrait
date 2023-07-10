@@ -27,6 +27,8 @@ async function getTopics() {
     {
       headers: {
         'Content-Type': 'application/json',
+        origin: 'http://localhost:7080',
+        'X-Requested-With': 'XMLHttpRequest',
       },
     }
   );
