@@ -4,14 +4,19 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import GraphData from './GraphData';
+import { useState } from 'react';
 
-export default function GraphMenu(props) {
+export default function GraphMenu({ name, setName, setUrl, url }) {
 
-  const messages_in_url = "http://localhost:3000/d/c2ef0e4a-da28-4797-bd86-5c1957aa9039/newmessagesin?orgId=1&refresh=5s&viewPanel=1&viewPanel=1&kiosk";
-  const messages_out_url = "http://localhost:3000/d/b7cc76a7-51f0-4175-bbbc-dada7ec3fa2d/messagesout?orgId=1&refresh=5s&viewPanel=1&kiosk";
-  const backlog = "http://localhost:3000/d/d20d409b-6974-4ca4-b16c-fc74c6aa7cd1/newbacklog?orgId=1&refresh=5s&viewPanel=1&kiosk";
+  const result = GraphData()
+  const data = result.graphData
 
-  const { name, setName, setUrl } = props;
+  // const messages_in_url = "http://localhost:3000/d/c2ef0e4a-da28-4797-bd86-5c1957aa9039/newmessagesin?orgId=1&refresh=5s&viewPanel=1&viewPanel=1&kiosk";
+  // const messages_out_url = "http://localhost:3000/d/b7cc76a7-51f0-4175-bbbc-dada7ec3fa2d/messagesout?orgId=1&refresh=5s&viewPanel=1&kiosk";
+  // const backlog = "http://localhost:3000/d/d20d409b-6974-4ca4-b16c-fc74c6aa7cd1/newbacklog?orgId=1&refresh=5s&viewPanel=1&kiosk";
+
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -27,15 +32,16 @@ export default function GraphMenu(props) {
     const { id } = e.target;
     let temp;
 
-    if (id === messages_in_url) {
-      temp = 'messages_in';
-    } 
-    else if (id === messages_out_url) {
-      temp = 'messages_out';
+    if (id === data['messagesIn']) {
+      temp = 'messagesIn';
+    }
+    else if (id === data['messagesOut']) {
+      temp = 'messagesOut';
     }
     else {
       temp = 'backlog';
     }
+    console.log({ id })
     setUrl(id);
     setName(temp)
     setAnchorEl(null);
@@ -50,7 +56,7 @@ export default function GraphMenu(props) {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        sx={{fontSize: '10px'}}
+        sx={{ fontSize: '10px' }}
       >
         {name}
       </Button>
@@ -63,11 +69,11 @@ export default function GraphMenu(props) {
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
-        sx={{'& .MuiList-root': {bgcolor: 'rgba(67, 67, 67, 0.775)', padding: '0'}}}
+        sx={{ '& .MuiList-root': { bgcolor: 'rgba(67, 67, 67, 0.775)', padding: '0' } }}
       >
-        <MenuItem onClick={changeGraph} id={messages_in_url}>messages_in</MenuItem>
-        <MenuItem onClick={changeGraph} id={messages_out_url}>messages_out</MenuItem>
-        <MenuItem onClick={changeGraph} id={backlog}>backlog</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messagesIn']}>messagesIn</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messagesOut']}>messagesOut</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['backlog']}>backlog</MenuItem>
       </Menu>
     </div>
   );
