@@ -1,22 +1,30 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 
 // parse incoming json requests
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-// statically serve the build folder
-app.use('/build', express.static(path.join(__dirname, '../build')));
+// statically serve the build folder 
+// app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
 // app.use(express.static('client'));
+// app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../client')));
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:7080'); // Replace with your client origin
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Add other allowed methods if needed
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Add other allowed headers if needed
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/index.html'))
+})
+
+// app.get('/grafport', (req, res) => {
+  // console.log('in grafportback')
+  // console.log(process.env.GRAFPORT)
+  // res.status(200).send(process.env.GRAFPORT || '2222');
+// })
 
   // Handle preflight requests
   if (req.method === 'OPTIONS') {
@@ -24,7 +32,7 @@ app.use((req, res, next) => {
   } else {
     next();
   }
-});
+;
 
 //route error handler
 app.use((req, res) =>
