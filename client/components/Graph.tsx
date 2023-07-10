@@ -7,7 +7,7 @@ export default function Graph({ index }) {
   const result = GraphData()
   const data = result.graphData
 
-  const graphDataArray = [data['messagesIn'], data['messagesOut'], data['backlog'], data['activeConnections'], data['memoryUsage']]
+  const graphDataArray = [data['messagesIn'], data['messagesOut'], data['backlog'], data['activeConnections'], data['memoryUsage'], data['messageRate']]
 
   const [name, setName] = useState<string>('messagesIn');
   const [url, setUrl] = useState<string>(graphDataArray[index])
