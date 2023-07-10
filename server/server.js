@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-// statically serve the build folder 
+// statically serve the build folder
 // app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
 // app.use(express.static('client'));
@@ -17,22 +17,22 @@ app.use(express.static(path.join(__dirname, '../dist')));
 app.use(express.static(path.join(__dirname, '../client')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/index.html'))
-})
+  res.sendFile(path.join(__dirname, '../client/index.html'));
+});
 
 // app.get('/grafport', (req, res) => {
-  // console.log('in grafportback')
-  // console.log(process.env.GRAFPORT)
-  // res.status(200).send(process.env.GRAFPORT || '2222');
+// console.log('in grafportback')
+// console.log(process.env.GRAFPORT)
+// res.status(200).send(process.env.GRAFPORT || '2222');
 // })
 
-  // Handle preflight requests
-  if (req.method === 'OPTIONS') {
-    res.sendStatus(200);
-  } else {
-    next();
-  }
-;
+// Handle preflight requests
+//   if (req.method === 'OPTIONS') {
+//     res.sendStatus(200);
+//   } else {
+//     next();
+//   }
+// ;
 
 //route error handler
 app.use((req, res) =>

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import Body from './client/components/Body'
-import Navbar from './client/components/Navbar'
+import React, { useEffect } from 'react';
+import Body from './client/components/Body';
+import Navbar from './client/components/Navbar';
 // export default function App() {
 //   return (
 //     <div>App</div>
@@ -17,30 +17,29 @@ import Navbar from './client/components/Navbar'
 //   console.log(result);
 // }
 // getTopics();
-async function getTopics() {
-  const response = await fetch(
-    'http://localhost:8080/admin/v2/persistent/public/default',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+// async function getTopics() {
+//   const response = await fetch(
+//     'http://localhost:8080/admin/v2/persistent/public/default',
+//     {
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     }
+//   );
 
-  if (!response.ok) {
-    const errorMessage = await response.text();
-    console.log('Error retrieving topics:', response.status, errorMessage);
-    return;
-  }
+//   if (!response.ok) {
+//     const errorMessage = await response.text();
+//     console.log('Error retrieving topics:', response.status, errorMessage);
+//     return;
+//   }
 
-  const data = await response.json();
-  const topics = data.topics;
+//   const data = await response.json();
+//   const topics = data.topics;
 
-  console.log('Topics:', topics);
-}
+//   console.log('Topics:', topics);
+// }
 
-getTopics();
-
+// getTopics();
 
 const App = () => {
   // const grafport: string | number = process.env.GRAFPORT ?? 2999;
@@ -51,20 +50,26 @@ const App = () => {
   //   const data = await fetch('/grafport');
   //   const result = await data.text();
   //   console.log(result)
-    
-    // .then(data => {
-    //   console.log(data)
-    // });
-    
-    // console.log(grafport.json())
+
+  // .then(data => {
+  //   console.log(data)
+  // });
+
+  // console.log(grafport.json())
   // })();
   // console.log('hello')
   return (
     <div className='AppDisplay'>
-       <div className='Navbar'> <Navbar /> </div>
-       <div className='Body'> <Body /> </div> 
+      <div className='Navbar'>
+        {' '}
+        <Navbar />{' '}
+      </div>
+      <div className='Body'>
+        {' '}
+        <Body />{' '}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
