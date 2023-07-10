@@ -64,6 +64,12 @@ body {
     }
     .NavButtons:hover {
         background-color: rgba(158, 98, 190, 0.686);
+        cursor: pointer;
+    }
+    svg:hover {
+        width: 2.5rem;
+        cursor: pointer;
+        border-radius: 6px;
     }
     svg:hover {
         width: 2.5rem;
@@ -149,4 +155,27 @@ body {
     border-radius: 8px;
     overflow: hidden;
 }
-// testing github account change
+
+#fade-button {
+    background-color: rgba(85, 85, 86, 0.775);
+    color: white
+}
+
+.MuiList-root {
+    // background-color: rgba(67, 67, 67, 0.775);
+    // color: white;
+    padding-left: 20px;
+}
+
+#graph-container1, 
+#graph-container2 {
+    position: relative;
+}
+
+.menu {
+    top: 5px;
+    right: 50px;
+    position: absolute;
+
+}
+

@@ -29,6 +29,10 @@
     "testEnvironment": "jest-environment-jsdom"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.13.7",
     "css-loader": "^6.8.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
