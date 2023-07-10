@@ -1,9 +1,16 @@
 import React from 'react'
 import GraphMenu from './GraphMenu'
 import { useState } from 'react';
+import GraphData from './GraphData';
 
-export default function Graph1({ name, setName, url, setUrl }) {
+export default function Graph({ index }) {
+  const result = GraphData()
+  const data = result.graphData
 
+  const graphDataArray = [data['messagesIn'], data['messagesOut'], data['backlog'], data['activeConnections'], data['memoryUsage']]
+
+  const [name, setName] = useState<string>('messagesIn');
+  const [url, setUrl] = useState<string>(graphDataArray[index])
 
   return (
 

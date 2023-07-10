@@ -8,18 +8,14 @@ import { useState } from 'react'
 // to be equal to a position in that array. Have graph render new URL based on setUrl setState defined in graphMenu.
 
 export default function Display() {
-  const result = GraphData()
-  const data = result.graphData
 
-  const graphDataArray = [data['messagesIn'], data['messagesOut'], data['backlog']]
-
-
-  const [name, setName] = useState<string>('messagesIn');
-  const [url, setUrl] = useState<string>('')
   let graphArr = [];
   for (let i = 0; i < 6; i++) {
-    graphArr.push(<Graph name={name} setName={setName} url={url} setUrl={setUrl} key={i} />)
+
+    graphArr.push(<Graph key={i} index={i} />)
+
   }
+
   return (
     <div className='DisplayContainer'>
       {graphArr}
