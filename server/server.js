@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 
 // parse incoming json requests
 app.use(express.json());
@@ -9,10 +9,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // statically serve the build folder 
-app.use('/build', express.static(path.join(__dirname, '../build')));
+// app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
 // app.use(express.static('client'));
+// app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../client')));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/index.html'))
+})
+
+// app.get('/grafport', (req, res) => {
+  // console.log('in grafportback')
+  // console.log(process.env.GRAFPORT)
+  // res.status(200).send(process.env.GRAFPORT || '2222');
+// })
 
 
 //route error handler
