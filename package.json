@@ -27,6 +27,7 @@
     "testEnvironment": "jest-environment-jsdom"
   },
   "dependencies": {
+    "cors-anywhere": "^0.4.4",
     "css-loader": "^6.8.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
