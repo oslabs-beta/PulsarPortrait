@@ -71,9 +71,11 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         TransitionComponent={Fade}
         sx={{ '& .MuiList-root': { bgcolor: 'rgba(67, 67, 67, 0.775)', padding: '0' } }}
       >
-        <MenuItem onClick={changeGraph} id={data['messagesIn']}>messagesIn</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['messagesOut']}>messagesOut</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['backlog']}>backlog</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messagesIn']}>Messages In</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messagesOut']}>Messages Out</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messageRate']}>Mesages Rate</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['backlog']}>Backlog</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['activeConnections']}>messagesIn</MenuItem>
       </Menu>
     </div>
   );

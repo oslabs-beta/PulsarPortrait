@@ -82,7 +82,7 @@ body {
     display: flex;
     flex-direction: row;
     // border: 1px solid blue;
-    // height: 90vh;
+    height: 57rem;
     // width: 99vw;
     // background-color: rgb(60, 60, 60);
     width: 100%;
@@ -97,9 +97,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     // height: 90vh;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 5px;
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
     // border: 2px solid pink;
 }
 
@@ -149,8 +151,8 @@ body {
 .chart {
     // height: 20vh;
     // width: 90vw;
-    height: 300px;
-    width: 60rem;
+    height: 270px;
+    width: 55rem;
     border-radius: 8px;
     overflow: hidden;
 }
