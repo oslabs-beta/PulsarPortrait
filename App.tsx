@@ -21,31 +21,31 @@ import Navbar from './client/components/Navbar';
 //   console.log('Topics:', topics)
 // }
 // getTopics();
-async function getTopics() {
-  const response = await fetch(
-    'http://localhost:8081/http://localhost:8080/admin/v2/persistent/public/default',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        origin: 'http://localhost:7080',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-    }
-  );
+// async function getTopics() {
+//   const response = await fetch(
+//     'http://localhost:8081/http://localhost:8080/admin/v2/persistent/public/default',
+//     {
+//       headers: {
+//         'Content-Type': 'application/json',
+//         origin: 'http://localhost:7080',
+//         'X-Requested-With': 'XMLHttpRequest',
+//       },
+//     }
+//   );
 
-  if (!response.ok) {
-    const errorMessage = await response.text();
-    console.log('Error retrieving topics:', response.status, errorMessage);
-    return;
-  }
+//   if (!response.ok) {
+//     const errorMessage = await response.text();
+//     console.log('Error retrieving topics:', response.status, errorMessage);
+//     return;
+//   }
 
-  const data = await response.json();
-  const topics = data.topics;
+//   const data = await response.json();
+//   const topics = data.topics;
 
-  console.log('Topics:', topics);
-}
+//   console.log('Topics:', topics);
+// }
 
-getTopics();
+// getTopics();
 
 const App = () => {
   // const grafport: string | number = process.env.GRAFPORT ?? 2999;

@@ -38,8 +38,16 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
     else if (id === data['messagesOut']) {
       temp = 'messagesOut';
     }
-    else {
-      temp = 'backlog';
+    else if (id === data['messageRate']) {
+      temp = 'messageRate';
+    }
+    else if (id === data['backlog']) {
+      temp = 'backlog'
+    }
+    else if (id === data['activeConnections']) {
+      temp = 'activeConnections'
+    } else {
+      temp = 'memoryUsage'
     }
     console.log({ id })
     setUrl(id);
@@ -75,7 +83,8 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         <MenuItem onClick={changeGraph} id={data['messagesOut']}>Messages Out</MenuItem>
         <MenuItem onClick={changeGraph} id={data['messageRate']}>Mesages Rate</MenuItem>
         <MenuItem onClick={changeGraph} id={data['backlog']}>Backlog</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['activeConnections']}>messagesIn</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['activeConnections']}>Active Connections</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['memoryUsage']}>Memory Usage</MenuItem>
       </Menu>
     </div>
   );
