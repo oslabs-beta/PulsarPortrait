@@ -33,6 +33,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
     "@mui/material": "^5.13.7",
+    "cors-anywhere": "^0.4.4",
     "css-loader": "^6.8.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
