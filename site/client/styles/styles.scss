@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300&family=Russo+One&display=swap');
+$white: #ffff;
+
+// for headings 
+$dark-black: #212121;
+// for 
+$light-black: #2c2c2c;
+// for text content
+$lightest-black: #6d6d6d;
+$grey: #e0e0e0;
+
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.MuiBox-root {
+  justify-content: right;
+}

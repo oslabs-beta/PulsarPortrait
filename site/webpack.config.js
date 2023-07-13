@@ -7,7 +7,7 @@ module.exports = {
     entry: [ 
         // 'babel-polyfill',
     //    path.resolve(__dirname, './index.js'),
-       path.resolve(__dirname, './index.js'),
+       path.resolve(__dirname, './index.tsx'),
 
     ],
     output: {
@@ -18,7 +18,8 @@ module.exports = {
     devServer: {
         host: 'localhost',
         port: 7081,
-
+        // pulsar exposes metrics on port 8080
+        // match the output path
         static: {
           directory: path.resolve(__dirname, 'dist'),
           // match the output 'publicPath'
@@ -70,6 +71,13 @@ module.exports = {
                 }
             },
             {
+                test: /.tsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'ts-loader'
+                }
+            },
+            {
                 test: /\.s[ac]ss$/,
                 use: ["style-loader", "css-loader", 'sass-loader']
             }
@@ -77,6 +85,6 @@ module.exports = {
     },
     resolve: {
         // Enable importing JS / JSX files without specifying their extension
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
 }
