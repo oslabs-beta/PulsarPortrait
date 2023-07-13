@@ -1,1 +1,4 @@
 node_modules
+/imageConfigs/grafana/data
+/imageConfigs/prometheus/promData
+oggrafdata/

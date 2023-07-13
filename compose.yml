@@ -8,7 +8,7 @@ services:
   prometheus:
     # image: pulsarprom:latest
     #
-    image: grantcthomas/pulsarproto:latest
+    image: pulsarproto
     container_name: prometheus
     networks:
       - network1
@@ -18,6 +18,18 @@ services:
     #   - PULSAR_BROKER_PORT=6666
     volumes:
       - ./imageConfigs/prometheus/promData:/prometheus
+  
+  # grafana:
+  #   image: grantcthomas/pulsagraf
+  #   container_name: grafana
+  #   networks:
+  #     - network1
+  #   ports:
+  #     - "2222:3000"
+  #   depends_on:
+  #     - prometheus
+
+  
 
   grafana:
     image: grafana/grafana:latest
@@ -40,7 +52,8 @@ services:
       - prometheus
 
   pulsarportrait:
-    image: pulsarportrait
+    # image: grantcthomas/pulsarportrait
+    image: pp
     container_name: pp
     ports:
       - '3333:3333'

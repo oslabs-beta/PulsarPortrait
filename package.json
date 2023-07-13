@@ -37,6 +37,7 @@
     "css-loader": "^6.8.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "frameguard": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
@@ -44,8 +45,7 @@
     "sass-loader": "^13.3.2",
     "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6",
-    "win-node-env": "^0.6.1"
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",

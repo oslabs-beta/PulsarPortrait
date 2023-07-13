@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:latest
 
 WORKDIR /app
 
@@ -14,4 +14,4 @@ ENV PORT=3333
 
 EXPOSE 3333
 
-CMD ["node", "server/server.js"]
+ENTRYPOINT ["node", "./server/server.js"]

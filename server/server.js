@@ -2,11 +2,25 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3333;
-
+// const frameguard = require('frameguard');
 // parse incoming json requests
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
+// app.use(frameguard({ action: "SAMEORIGIN" }));
+// app.use(frameguard({
+//   action: 'allow-from',
+//   domain: 'ALLOWALL'
+// }))
+// NOTE: `ALLOW-FROM` is not supported in most browsers.
+// app.use((req, res, next) => {
+//   res.setHeader("X-Frame-Options", "ALLOW-FROM http://localhost:2222");
+//   next();
+// });
+// app.use((req, res, next) => {
+//   res.setHeader("Content-Security-Policy", "frame-ancestors 'self' http://localhost:2222");
+//   next();
+// });
 
 // statically serve the build folder
 // app.use('/dist', express.static(path.join(__dirname, '../dist')));

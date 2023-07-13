@@ -91,7 +91,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -131,6 +131,6 @@
   "timezone": "",
   "title": "newbacklog",
   "uid": "d20d409b-6974-4ca4-b16c-fc74c6aa7cd1",
-  "version": 4,
+  "version": 6,
   "weekStart": ""
 }
