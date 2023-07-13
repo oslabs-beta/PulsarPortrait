@@ -25,6 +25,20 @@ const App = () => {
     
     // console.log(grafport.json())
   // })();
+    (async function getGraf () {
+    console.log('in app.tsx')
+    const data = await fetch('http://localhost:8080/admin/v2/persistent/public/default', {
+      mode: 'no-cors'
+    })
+    const result = await data.text();
+    console.log('result', result)
+    
+    // .then(data => {
+    //   console.log(data)
+    // });
+    
+    // console.log(grafport.json())
+  })();
   // console.log('hello')
   return (
     <div className='AppDisplay'>
