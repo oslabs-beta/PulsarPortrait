@@ -5,11 +5,11 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
     entry: [ 
-        'babel-polyfill',
-       path.resolve(__dirname, './index.js'),
+        // 'babel-polyfill',
+    //    path.resolve(__dirname, './index.js'),
+       path.resolve(__dirname, './index.tsx'),
 
     ],
-
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js',
@@ -17,7 +17,8 @@ module.exports = {
     },
     devServer: {
         host: 'localhost',
-        port: 8080,
+        port: 7080,
+        // pulsar exposes metrics on port 8080
         // match the output path
         static: {
           directory: path.resolve(__dirname, 'dist'),
@@ -47,7 +48,7 @@ module.exports = {
         //   },
         // },
         proxy: {
-            '/': 'http://localhost:3000'
+            '/': 'http://localhost:3333'
           }
       },
 
@@ -70,6 +71,13 @@ module.exports = {
                 }
             },
             {
+                test: /.tsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'ts-loader'
+                }
+            },
+            {
                 test: /\.s[ac]ss$/,
                 use: ["style-loader", "css-loader", 'sass-loader']
             }
@@ -77,6 +85,6 @@ module.exports = {
     },
     resolve: {
         // Enable importing JS / JSX files without specifying their extension
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
 }

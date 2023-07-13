@@ -1,1 +1,6 @@
 node_modules
+dist
+.vscode
+/imageConfigs/grafana/data
+/imageConfigs/prometheus/promData
+oggrafdata/
