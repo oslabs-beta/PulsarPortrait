@@ -8,7 +8,8 @@ export default function GraphData() {
         'activeConnections': 'http://localhost:2222/d/ebc6aadf-fb78-435f-bd26-5a0e3743c9d5/active-connections?orgId=1&refresh=5s&viewPanel=1&kiosk',
         'memoryUsage': 'http://localhost:2222/d/ec981016-898e-462f-9a23-cb9384c5e5c3/memory-usage?orgId=1&refresh=5&viewPanel=1&kiosk',
         'messageRate': 'http://localhost:2222/d/e45ef206-3f60-4226-95bc-c0107f6c90f7/message-rate-graph?orgId=1&refresh=5s&from=1689002117576&to=1689023717576&viewPanel=1&kiosk',
-
+        'topicsAndSubscriptions' : 'http://localhost:2222/d/c8268214-d094-46d5-9a25-7cce1192ae69/topicsandsubscriptions?orgId=1&refresh=5s&viewPanel=1&kiosk',
+        'jettyrequesttime' : 'http://localhost:2222/d/e11221ec-7d82-47ec-a3b1-5356e4f63c6b/jettyrequesttime?orgId=1&refresh=5s&viewPanel=1&kiosk'
     }
     return (
         { graphData }
