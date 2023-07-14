@@ -84,6 +84,8 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         <MenuItem onClick={changeGraph} id={data['backlog']}>Backlog</MenuItem>
         <MenuItem onClick={changeGraph} id={data['activeConnections']}>Active Connections</MenuItem>
         <MenuItem onClick={changeGraph} id={data['memoryUsage']}>Memory Usage</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['topicsAndSubscriptions']}>Topics and Subscriptions</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['jettyrequesttime']}>Jetty Request Time</MenuItem>
       </Menu>
     </div>
   );
