@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 6,
+  "id": 5,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -27,7 +27,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -35,45 +34,46 @@
           },
           "mappings": [],
           "thresholds": {
-            "mode": "percentage",
+            "mode": "absolute",
             "steps": [
               {
                 "color": "dark-purple",
                 "value": null
               },
               {
-                "color": "dark-orange",
-                "value": 80
+                "color": "semi-dark-orange",
+                "value": 70
               },
               {
-                "color": "dark-red",
-                "value": 90
+                "color": "semi-dark-red",
+                "value": 85
               }
             ]
-          }
+          },
+          "unit": "percent"
         },
         "overrides": [
           {
             "matcher": {
-              "id": "byRegexp",
-              "options": "Value #A"
+              "id": "byName",
+              "options": "pulsar_lb_cpu_usage"
             },
             "properties": [
               {
                 "id": "displayName",
-                "value": "Producer Count"
+                "value": "CPU Usage"
               }
             ]
           },
           {
             "matcher": {
-              "id": "byRegexp",
-              "options": "Value #B"
+              "id": "byName",
+              "options": "pulsar_lb_memory_usage"
             },
             "properties": [
               {
                 "id": "displayName",
-                "value": "Consumer Count"
+                "value": "Memory Usage"
               }
             ]
           }
@@ -104,10 +104,8 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "pulsar_producers_count",
-          "format": "table",
+          "expr": "pulsar_lb_cpu_usage",
           "instant": false,
-          "legendFormat": "{{label_name}}",
           "range": true,
           "refId": "A"
         },
@@ -117,18 +115,14 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "exemplar": false,
-          "expr": "pulsar_consumers_count",
-          "format": "table",
+          "expr": "pulsar_lb_memory_usage",
           "hide": false,
           "instant": false,
-          "interval": "",
-          "legendFormat": "",
           "range": true,
           "refId": "B"
         }
       ],
-      "title": "Producer/Consumer Count",
+      "title": "Usage Stats",
       "transparent": true,
       "type": "gauge"
     }
@@ -146,8 +140,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "test",
-  "uid": "d79b197c-2abe-4e1b-b16e-0fa10b0656a4",
-  "version": 7,
+  "title": "New dashboard",
+  "uid": "a6f621d3-bb3c-4569-8315-2e0c4b2de35b",
+  "version": 2,
   "weekStart": ""
 }
