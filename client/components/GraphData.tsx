@@ -14,6 +14,10 @@ export default function GraphData() {
       'http://localhost:2222/d/a6f621d3-bb3c-4569-8315-2e0c4b2de35b/new-dashboard?orgId=1&refresh=5s&from=1689336334022&to=1689357934022&viewPanel=1&kiosk',
     messageRate:
       'http://localhost:2222/d/d79b197c-2abe-4e1b-b16e-0fa10b0656a4/test?orgId=1&refresh=5s&from=1689350706498&to=1689372306498&viewPanel=1&kiosk',
+    topicsAndSubscriptions:
+      'http://localhost:2222/d/c8268214-d094-46d5-9a25-7cce1192ae69/topicsandsubscriptions?orgId=1&refresh=5s&viewPanel=1&kiosk',
+    jettyrequesttime:
+      'http://localhost:2222/d/e11221ec-7d82-47ec-a3b1-5356e4f63c6b/jettyrequesttime?orgId=1&refresh=5s&viewPanel=1&kiosk',
   };
   return { graphData };
 }
