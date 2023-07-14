@@ -82,7 +82,6 @@ body {
     display: flex;
     flex-direction: row;
     // border: 1px solid blue;
-    height: 57rem;
     // width: 99vw;
     // background-color: rgb(60, 60, 60);
     width: 100%;
@@ -145,7 +144,8 @@ body {
 .Display {
     border-radius: 5px;
     // border: 2px solid greenyellow;
-    width: 100%;;
+    // width: 100%;
+    margin-bottom: 1%;
 }
 
 .chart {
