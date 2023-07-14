@@ -53,8 +53,8 @@ services:
 
   pulsarportrait:
     # image: grantcthomas/pulsarportrait
-    image: pp
-    container_name: pp
+    image: pulsarportrait
+    container_name: pulsarportrait
     ports:
       - '3333:3333'
     
