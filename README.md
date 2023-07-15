@@ -21,39 +21,41 @@ Description
 
 ## Getting Started
 
-### Option 1 - Include in your compose.yml file
-hello
+### Option 1 - Include in the services dictionary of your compose.yml file
 
+If your network is not pulsar, change it in the networks section. 
 ```yml
-  prometheus:
-    image: pulsarportrait/prometheus:latest
-    container_name: prometheus
-    networks:
-      - pulsar
-    ports:
-      - "9090:9090"
+prometheus:
+  image: pulsarportrait/prometheus:latest
+  container_name: prometheus
+  networks:
+    - pulsar
+  ports:
+    - "9090:9090"
 
-  pulsarportrait:
-    image: pulsarportrait/webapp:latest
-    container_name: pulsarportrait
-    networks:
-      - pulsar
-    ports:
-      - "3333:3333"
+pulsarportrait:
+  image: pulsarportrait/webapp:latest
+  container_name: pulsarportrait
+  networks:
+    - pulsar
+  ports:
+    - "3333:3333"
 
-  grafana:
-    image: pulsarportrait/grafana:latest
-    container_name: grafana
-    networks:
-      - pulsar
-    ports: 
-      - "2222:3000"
-    depends_on:
-      - prometheus
+grafana:
+  image: pulsarportrait/grafana:latest
+  container_name: grafana
+  networks:
+    - pulsar
+  ports: 
+    - "2222:3000"
+  depends_on:
+    - prometheus
 ```
 
 ### Option 2 - Fork this repo
-
+- Fork this repo
+- Start your Pulsar culster
+- In this repo, 
 ## How to Contribute
 
 ## Authors
