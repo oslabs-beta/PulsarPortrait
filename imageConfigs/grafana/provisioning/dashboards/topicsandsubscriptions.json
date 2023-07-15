@@ -115,7 +115,7 @@
           "refId": "A"
         }
       ],
-      "title": "Topics & Subscriptions",
+      "title": "           ",
       "transparent": true,
       "type": "stat"
     }
@@ -135,6 +135,6 @@
   "timezone": "",
   "title": "topicsandsubscriptions",
   "uid": "c8268214-d094-46d5-9a25-7cce1192ae69",
-  "version": 4,
+  "version": 7,
   "weekStart": ""
 }
