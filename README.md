@@ -22,6 +22,35 @@ Description
 ## Getting Started
 
 ### Option 1 - Include in your compose.yml file
+hello
+
+```yml
+  prometheus:
+    image: pulsarportrait/prometheus:latest
+    container_name: prometheus
+    networks:
+      - pulsar
+    ports:
+      - "9090:9090"
+
+  pulsarportrait:
+    image: pulsarportrait/webapp:latest
+    container_name: pulsarportrait
+    networks:
+      - pulsar
+    ports:
+      - "3333:3333"
+
+  grafana:
+    image: pulsarportrait/grafana:latest
+    container_name: grafana
+    networks:
+      - pulsar
+    ports: 
+      - "2222:3000"
+    depends_on:
+      - prometheus
+```
 
 ### Option 2 - Fork this repo
 
@@ -29,4 +58,4 @@ Description
 
 ## Authors
 
-<!-- - Grant Thomas [GitHub](https://github.com/GrantCT) | [LinkedIn](https://www.linkedin.com/in/grantcthomas/) -->
+- Grant Thomas [GitHub](https://github.com/GrantCT) | [LinkedIn](https://www.linkedin.com/in/grantcthomas/)
