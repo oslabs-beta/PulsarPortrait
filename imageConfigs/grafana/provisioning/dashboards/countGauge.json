@@ -104,7 +104,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "pulsar_producers_count",
+          "expr": "pulsar_broker_producers_count",
           "format": "table",
           "instant": false,
           "legendFormat": "{{label_name}}",
@@ -118,7 +118,7 @@
           },
           "editorMode": "builder",
           "exemplar": false,
-          "expr": "pulsar_consumers_count",
+          "expr": "pulsar_broker_consumers_count",
           "format": "table",
           "hide": false,
           "instant": false,
@@ -148,6 +148,6 @@
   "timezone": "",
   "title": "test",
   "uid": "d79b197c-2abe-4e1b-b16e-0fa10b0656a4",
-  "version": 7,
+  "version": 10,
   "weekStart": ""
 }

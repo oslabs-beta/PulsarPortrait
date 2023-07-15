@@ -52,8 +52,6 @@ services:
   pulsarportrait:
     # image: grantcthomas/pulsarportrait
     image: pulsarportrait
-    container_name: pp
-    image: pulsarportrait
     container_name: pulsarportrait
     ports:
       - '3333:3333'
@@ -89,31 +87,30 @@ services:
 #   depends_on:
 #     - prometheus
 
-
 # THIS IS THE CODE SNIPPET TO COPY INTO SERVICES DICTIONARY IN COMPOSE.YML
 
-  # prometheus:
-  #   image: pulsarportrait/prometheus:latest
-  #   container_name: prometheus
-  #   networks:
-  #     - pulsar
-  #   ports:
-  #     - "9090:9090"
+# prometheus:
+#   image: pulsarportrait/prometheus:latest
+#   container_name: prometheus
+#   networks:
+#     - pulsar
+#   ports:
+#     - "9090:9090"
 
-  # pulsarportrait:
-  #   image: pulsarportrait/webapp:latest
-  #   container_name: pulsarportrait
-  #   networks:
-  #     - pulsar
-  #   ports:
-  #     - "3333:3333"
+# pulsarportrait:
+#   image: pulsarportrait/webapp:latest
+#   container_name: pulsarportrait
+#   networks:
+#     - pulsar
+#   ports:
+#     - "3333:3333"
 
-  # grafana:
-  #   image: pulsarportrait/grafana:latest
-  #   container_name: grafana
-  #   networks:
-  #     - pulsar
-  #   ports: 
-  #     - "2222:3000"
-  #   depends_on:
-  #     - prometheus
+# grafana:
+#   image: pulsarportrait/grafana:latest
+#   container_name: grafana
+#   networks:
+#     - pulsar
+#   ports:
+#     - "2222:3000"
+#   depends_on:
+#     - prometheus
