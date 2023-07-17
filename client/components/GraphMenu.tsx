@@ -8,9 +8,8 @@ import GraphData from './GraphData';
 import { useState } from 'react';
 
 export default function GraphMenu({ name, setName, setUrl, url }) {
-
-  const result = GraphData()
-  const data = result.graphData
+  const result = GraphData();
+  const data = result.graphData;
 
   // const messages_in_url = "http://localhost:3000/d/c2ef0e4a-da28-4797-bd86-5c1957aa9039/newmessagesin?orgId=1&refresh=5s&viewPanel=1&viewPanel=1&kiosk";
   // const messages_out_url = "http://localhost:3000/d/b7cc76a7-51f0-4175-bbbc-dada7ec3fa2d/messagesout?orgId=1&refresh=5s&viewPanel=1&kiosk";
@@ -33,33 +32,27 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
 
     if (id === data['messagesIn']) {
       temp = 'messagesIn';
-    }
-    else if (id === data['messagesOut']) {
+    } else if (id === data['messagesOut']) {
       temp = 'messagesOut';
-    }
-    else if (id === data['messageRate']) {
-      temp = 'messageRate';
-    }
-    else if (id === data['backlog']) {
-      temp = 'backlog'
-    }
-    else if (id === data['activeConnections']) {
-      temp = 'activeConnections'
+    } else if (id === data['backlog']) {
+      temp = 'backlog';
+    } else if (id === data['activeConnections']) {
+      temp = 'activeConnections';
     } else {
-      temp = 'memoryUsage'
+      temp = 'memoryUsage';
     }
-    console.log({ id })
+    console.log({ id });
     setUrl(id);
-    setName(temp)
+    setName(temp);
     setAnchorEl(null);
-  }
+  };
 
   return (
     <div className='menu'>
       <Button
-        id="fade-button"
+        id='fade-button'
         aria-controls={open ? 'fade-menu' : undefined}
-        aria-haspopup="true"
+        aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
@@ -68,7 +61,7 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         {name}
       </Button>
       <Menu
-        id="fade-menu"
+        id='fade-menu'
         MenuListProps={{
           'aria-labelledby': 'fade-button',
         }}
@@ -76,16 +69,40 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
-        sx={{ '& .MuiList-root': { bgcolor: 'rgba(67, 67, 67, 0.775)', padding: '0' } }}
+        sx={{
+          '& .MuiList-root': {
+            bgcolor: 'rgba(67, 67, 67, 0.775)',
+            padding: '0',
+          },
+        }}
       >
-        <MenuItem onClick={changeGraph} id={data['messagesIn']}>Messages In</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['messagesOut']}>Messages Out</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['messageRate']}>Mesages Rate</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['backlog']}>Backlog</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['activeConnections']}>Active Connections</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['memoryUsage']}>Memory Usage</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['topicsAndSubscriptions']}>Topics and Subscriptions</MenuItem>
-        <MenuItem onClick={changeGraph} id={data['jettyrequesttime']}>Jetty Request Time</MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messagesIn']}>
+          Messages In
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messagesOut']}>
+          Messages Out
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['backlog']}>
+          Backlog
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['activeConnections']}>
+          Active Connections
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['memoryUsage']}>
+          Memory Usage
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['topicsAndSubscriptions']}>
+          Topics and Subscriptions
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['jettyrequesttime']}>
+          Jetty Request Time
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messageRateIn']}>
+          Message Rate In
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['messageRateOut']}>
+          Message Rate Out
+        </MenuItem>
       </Menu>
     </div>
   );

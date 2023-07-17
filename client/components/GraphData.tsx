@@ -16,6 +16,10 @@ export default function GraphData() {
       'http://localhost:2222/d/d79b197c-2abe-4e1b-b16e-0fa10b0656a4/test?orgId=1&refresh=5s&viewPanel=1&kiosk',
     jettyrequesttime:
       'http://localhost:2222/d/e11221ec-7d82-47ec-a3b1-5356e4f63c6b/jettyrequesttime?orgId=1&refresh=5s&viewPanel=1&kiosk',
+    messageRateIn:
+      'http://localhost:2222/d/a9961e9a-b44a-42c1-a855-427e3825b04c/broker-rate-in?orgId=1&refresh=5s&viewPanel=1&kiosk',
+    messageRateOut:
+      'http://localhost:2222/d/b9031b09-082f-4dc6-9b82-766c5e543328/message-rate-out?orgId=1&refresh=5s&viewPanel=1&kiosk',
   };
   return { graphData };
 }
