@@ -1,13 +1,15 @@
 version: '3'
 networks:
   pulsar-network:
+    # Write the name of your pulsar-network here
     name: justcluster_pulsar
     external: true
 
 services:
   prometheus:
     # image: pulsarproto
-    image: pulsarportrait/prometheus
+    # image: pulsarportrait/prometheus
+    image: promhostdock
     container_name: prometheus
     networks:
       - pulsar-network
