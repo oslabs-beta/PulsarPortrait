@@ -29,6 +29,10 @@
       },
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "fixedColor": "light-purple",
+            "mode": "fixed"
+          },
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -135,6 +139,6 @@
   "timezone": "",
   "title": "topicsandsubscriptions",
   "uid": "c8268214-d094-46d5-9a25-7cce1192ae69",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }

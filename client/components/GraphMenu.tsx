@@ -103,6 +103,12 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         <MenuItem onClick={changeGraph} id={data['messageRateOut']}>
           Message Rate Out
         </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['throughputIn']}>
+          Throughput in
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['throughputOut']}>
+          Throughput out
+        </MenuItem>
       </Menu>
     </div>
   );
