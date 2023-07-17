@@ -11,7 +11,7 @@ export default function GraphData() {
     topicsAndSubscriptions:
       'http://localhost:2222/d/c8268214-d094-46d5-9a25-7cce1192ae69/topicsandsubscriptions?orgId=1&refresh=5s&viewPanel=1&kiosk',
     memoryUsage:
-      'http://localhost:2222/d/a6f621d3-bb3c-4569-8315-2e0c4b2de35b/new-dashboard?orgId=1&refresh=5s&from=1689336334022&to=1689357934022&viewPanel=1&kiosk',
+      'http://localhost:2222/d/a6f621d3-bb3c-4569-8315-2e0c4b2de35b/new-dashboard?orgId=1&refresh=5s&viewPanel=1&kiosk',
     activeConnections:
       'http://localhost:2222/d/d79b197c-2abe-4e1b-b16e-0fa10b0656a4/test?orgId=1&refresh=5s&viewPanel=1&kiosk',
     jettyrequesttime:
