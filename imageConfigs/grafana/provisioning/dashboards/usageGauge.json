@@ -122,7 +122,7 @@
           "refId": "B"
         }
       ],
-      "title": "Usage Stats",
+      "title": "      ",
       "transparent": true,
       "type": "gauge"
     }

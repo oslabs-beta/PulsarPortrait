@@ -35,45 +35,38 @@
           },
           "mappings": [],
           "thresholds": {
-            "mode": "percentage",
+            "mode": "absolute",
             "steps": [
               {
                 "color": "dark-purple",
                 "value": null
-              },
-              {
-                "color": "dark-orange",
-                "value": 80
-              },
-              {
-                "color": "dark-red",
-                "value": 90
               }
             ]
-          }
+          },
+          "unit": "short"
         },
         "overrides": [
           {
             "matcher": {
-              "id": "byRegexp",
-              "options": "Value #A"
+              "id": "byName",
+              "options": "pulsar_broker_producers_count"
             },
             "properties": [
               {
                 "id": "displayName",
-                "value": "Producer Count"
+                "value": "Producers"
               }
             ]
           },
           {
             "matcher": {
-              "id": "byRegexp",
-              "options": "Value #B"
+              "id": "byName",
+              "options": "pulsar_broker_consumers_count"
             },
             "properties": [
               {
                 "id": "displayName",
-                "value": "Consumer Count"
+                "value": "Consumers"
               }
             ]
           }
@@ -87,14 +80,16 @@
       },
       "id": 1,
       "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
           "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "textMode": "auto"
       },
       "pluginVersion": "10.0.2",
       "targets": [
@@ -105,7 +100,7 @@
           },
           "editorMode": "builder",
           "expr": "pulsar_broker_producers_count",
-          "format": "table",
+          "format": "time_series",
           "instant": false,
           "legendFormat": "{{label_name}}",
           "range": true,
@@ -119,7 +114,7 @@
           "editorMode": "builder",
           "exemplar": false,
           "expr": "pulsar_broker_consumers_count",
-          "format": "table",
+          "format": "time_series",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -128,9 +123,9 @@
           "refId": "B"
         }
       ],
-      "title": "Producer/Consumer Count",
+      "title": "             ",
       "transparent": true,
-      "type": "gauge"
+      "type": "stat"
     }
   ],
   "refresh": "5s",
@@ -148,6 +143,6 @@
   "timezone": "",
   "title": "test",
   "uid": "d79b197c-2abe-4e1b-b16e-0fa10b0656a4",
-  "version": 10,
+  "version": 14,
   "weekStart": ""
 }
