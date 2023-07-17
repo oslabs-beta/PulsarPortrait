@@ -14,12 +14,12 @@ services:
     networks:
       - pulsar-network
     ports:
-      - "9090:9090"
+      - '9090:9090'
     # environment:
     #   - PULSAR_BROKER_PORT=6666
     volumes:
       - ./imageConfigs/prometheus/promData:/prometheus
-  
+
   # grafana:
   #   image: grantcthomas/pulsagraf
   #   container_name: grafana
@@ -30,15 +30,13 @@ services:
   #   depends_on:
   #     - prometheus
 
-  
-
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
     networks:
       - pulsar-network
     ports:
-      - "2222:3000"
+      - '2222:3000'
     environment:
       GF_PATHS_CONFIG: /etc/grafana/grafana.ini
       GF_AUTH_ANONYMOUS_ENABLED: 'true'
@@ -53,43 +51,69 @@ services:
       - prometheus
 
   pulsarportrait:
-    # image: pulsarportrait
-    image: pulsarportrait/webapp
+    image: pulsarportrait
+    # image: pulsarportrait/webapp
     container_name: pulsarportrait
     networks:
       - pulsar-network
     ports:
       - '3333:3333'
-    
-    # volumes:
-      # - /var/run/docker.sock:/var/run/docker.sock
-    # command: npm start
 
+    # volumes:
+    # - /var/run/docker.sock:/var/run/docker.sock
+    # command: npm start
+# THIS IS THE CODE SNIPPET TO COPY INTO SERVICES DICTIONARY IN COMPOSE.YML
+
+# prometheus:
+#   image: pulsarportrait/prometheus:latest
+#   container_name: prometheus
+#   networks:
+#     - pulsar
+#   ports:
+#     - "9090:9090"
+
+# pulsarportrait:
+#   image: pulsarportrait/webapp:latest
+#   container_name: pulsarportrait
+#   networks:
+#     - pulsar
+#   ports:
+#     - "3333:3333"
+
+# grafana:
+#   image: pulsarportrait/grafana:latest
+#   container_name: grafana
+#   networks:
+#     - pulsar
+#   ports:
+#     - "2222:3000"
+#   depends_on:
+#     - prometheus
 
 # THIS IS THE CODE SNIPPET TO COPY INTO SERVICES DICTIONARY IN COMPOSE.YML
 
-  # prometheus:
-  #   image: pulsarportrait/prometheus:latest
-  #   container_name: prometheus
-  #   networks:
-  #     - pulsar
-  #   ports:
-  #     - "9090:9090"
+# prometheus:
+#   image: pulsarportrait/prometheus:latest
+#   container_name: prometheus
+#   networks:
+#     - pulsar
+#   ports:
+#     - "9090:9090"
 
-  # pulsarportrait:
-  #   image: pulsarportrait/webapp:latest
-  #   container_name: pulsarportrait
-  #   networks:
-  #     - pulsar
-  #   ports:
-  #     - "3333:3333"
+# pulsarportrait:
+#   image: pulsarportrait/webapp:latest
+#   container_name: pulsarportrait
+#   networks:
+#     - pulsar
+#   ports:
+#     - "3333:3333"
 
-  # grafana:
-  #   image: pulsarportrait/grafana:latest
-  #   container_name: grafana
-  #   networks:
-  #     - pulsar
-  #   ports: 
-  #     - "2222:3000"
-  #   depends_on:
-  #     - prometheus
+# grafana:
+#   image: pulsarportrait/grafana:latest
+#   container_name: grafana
+#   networks:
+#     - pulsar
+#   ports:
+#     - "2222:3000"
+#   depends_on:
+#     - prometheus
