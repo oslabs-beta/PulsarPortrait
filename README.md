@@ -61,3 +61,4 @@ grafana:
 ## Authors
 
 - Grant Thomas [GitHub](https://github.com/GrantCT) | [LinkedIn](https://www.linkedin.com/in/grantcthomas/)
+- Jordan Zolman [Github](https://github.com/PrincePuggo) | [LinkedIn](https://www.linkedin.com/in/jordanzolman)

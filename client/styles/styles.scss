@@ -16,6 +16,8 @@
     font-size: 50pt;
 }
 
+
+
 body {
     background-color: grey;
     font-family: 'Russo One', sans-serif;
@@ -37,7 +39,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.AppDisplay {
+.app-display {
     // margin: 2.5rem;
     display: flex;
     flex-direction: row;
@@ -49,20 +51,20 @@ body {
     margin-bottom: 20px;
 }
 
-.Navbar {
+.navbar {
     display: flex;
     justify-content: center;
     // border: 1px solid green;
     background-color: purple;
     border-radius: 5px;
     // width: 5rem;
-    .NavButtons {
+    .nav-buttons {
         color: white;
         padding: 5px;
         margin-bottom: 10px;
         margin-top: 5px;
     }
-    .NavButtons:hover {
+    .nav-buttons:hover {
         background-color: rgba(158, 98, 190, 0.686);
         cursor: pointer;
     }
@@ -78,7 +80,7 @@ body {
     }
 }
 
-.Body {
+.body {
     display: flex;
     flex-direction: row;
     // border: 1px solid blue;
@@ -88,9 +90,11 @@ body {
     background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(50, 25, 83) 101.8%); 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-radius: 5px;
+
 }
 
-.DisplayContainer {
+.display-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -101,33 +105,34 @@ body {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 2rem;
+    padding-bottom: 1rem;
     // border: 2px solid pink;
 }
 
-.Graph {
-    // background-color: maroon;
-    // display: flex;
-    flex-grow: 1;
-    border-radius: 5px;
-    // display: grid;
-    // grid-row: auto;
-    color: white;
-    // margin: 1rem;
-    // height: 8vh;
-    // width: 90vw;
-    // width: 90%;
-    // border: 2px solid white;
-    // overflow-y: hidden;
-}
+// .Graph {
+//     // background-color: maroon;
+//     // display: flex;
+//     flex-grow: 1;
+//     border-radius: 5px;
+//     // display: grid;
+//     // grid-row: auto;
+//     color: white;
+//     // margin: 1rem;
+//     // height: 8vh;
+//     // width: 90vw;
+//     // width: 90%;
+//     // border: 2px solid white;
+//     // overflow-y: hidden;
+// }
 
-#HomeButton {
+#home-button {
     // height: 200%;
     // width: 200%
     // size: 35;
     color: white;
 }
 
-.navbar {
+.navbar-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -141,13 +146,6 @@ body {
     // background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
 }
 
-.Display {
-    border-radius: 5px;
-    // border: 2px solid greenyellow;
-    // width: 100%;
-    margin-bottom: 1%;
-}
-
 .chart {
     // height: 20vh;
     // width: 90vw;
@@ -156,7 +154,11 @@ body {
     border-radius: 8px;
     overflow: hidden;
 }
-
+@media screen and (max-width: 2012.5px) {
+    .chart {
+       width: 90vw;
+    }
+  }
 #fade-button {
     background-color: rgba(85, 85, 86, 0.775);
     color: white

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import Body from './client/components/Body';
+import Display from './client/components/Display';
 import Navbar from './client/components/Navbar';
+
 // export default function App() {
 //   return (
 //     <div>App</div>
@@ -79,14 +80,14 @@ const App = () => {
   })();
   // console.log('hello')
   return (
-    <div className='AppDisplay'>
-      <div className='Navbar'>
+    <div className='app-display'>
+      <div className='navbar'>
         {' '}
         <Navbar />{' '}
       </div>
-      <div className='Body'>
+      <div className='body'>
         {' '}
-        <Body />{' '}
+        <Display />{' '}
       </div>
     </div>
   );
