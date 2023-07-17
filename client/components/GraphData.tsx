@@ -16,6 +16,10 @@ export default function GraphData() {
       'http://localhost:2222/d/d79b197c-2abe-4e1b-b16e-0fa10b0656a4/test?orgId=1&refresh=5s&viewPanel=1&kiosk',
     jettyrequesttime:
       'http://localhost:2222/d/e11221ec-7d82-47ec-a3b1-5356e4f63c6b/jettyrequesttime?orgId=1&refresh=5s&viewPanel=1&kiosk',
+    throughputIn:
+    'http://localhost:2222/d/bdfb696f-55e4-46da-aa3d-381b5cf2f408/throughputin?orgId=1&refresh=5s&viewPanel=1&kiosk',
+    throughputOut:
+    'http://localhost:2222/d/b1f5eb24-9c75-4ba3-a40b-7bf8e1ccdc94/throughtputout?orgId=1&refresh=5sviewPanel=1&kiosk'
   };
   return { graphData };
 }
