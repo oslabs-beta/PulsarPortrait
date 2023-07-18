@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 12,
+  "id": 9,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -27,21 +27,22 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "dark-purple",
+            "fixedColor": "#cd10b3",
             "mode": "fixed"
           },
           "custom": {
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "msg/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
             "fillOpacity": 14,
-            "gradientMode": "opacity",
+            "gradientMode": "none",
             "hideFrom": {
               "legend": false,
               "tooltip": false,
@@ -68,12 +69,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "semi-dark-blue",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -92,7 +89,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": false
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -106,13 +103,13 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "pulsar_broker_msg_backlog",
+          "expr": "pulsar_broker_rate_in",
           "instant": false,
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "       ",
+      "title": "      ",
       "transparent": true,
       "type": "timeseries"
     }
@@ -125,13 +122,13 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "newbacklog",
-  "uid": "d20d409b-6974-4ca4-b16c-fc74c6aa7cd1",
-  "version": 9,
+  "title": "Broker rate in",
+  "uid": "a9961e9a-b44a-42c1-a855-427e3825b04c",
+  "version": 3,
   "weekStart": ""
 }
