@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 9,
+  "id": 10,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -89,7 +89,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -122,13 +122,13 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Broker rate in",
   "uid": "a9961e9a-b44a-42c1-a855-427e3825b04c",
-  "version": 3,
+  "version": 1,
   "weekStart": ""
 }
