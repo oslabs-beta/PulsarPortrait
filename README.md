@@ -66,3 +66,5 @@ grafana:
 
 - Grant Thomas [GitHub](https://github.com/GrantCT) | [LinkedIn](https://www.linkedin.com/in/grantcthomas/)
 - Cyrux Lam [GitHub](https://github.com/cyduckk) | [LinkedIn](https://www.linkedin.com/in/cyrux-lam/)
+
+- Jordan Zolman [Github](https://github.com/PrincePuggo) | [LinkedIn](https://www.linkedin.com/in/jordanzolman)

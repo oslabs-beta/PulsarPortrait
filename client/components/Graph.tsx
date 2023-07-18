@@ -15,8 +15,16 @@ export default function Graph({ index }) {
     data['memoryUsage'],
     data['topicsAndSubscriptions'],
   ];
+  const graphNameArray = [
+    'Messages In',
+    'Messages Out',
+    'Backlog',
+    'Producer/Consumer Count',
+    'Memory Usage',
+    'Topics and Subscriptions',
+  ]
 
-  const [name, setName] = useState<string>('messagesIn');
+  const [name, setName] = useState<string>(graphNameArray[index]);
   const [url, setUrl] = useState<string>(graphDataArray[index]);
 
   return (
