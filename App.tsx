@@ -21,63 +21,38 @@ import Navbar from './client/components/Navbar';
 //   const topics = data.topics;
 //   console.log('Topics:', topics)
 // }
-getTopics();
-async function getTopics() {
-  const response = await fetch(
-    'http://localhost:8081/http://localhost:8080/admin/v2/persistent/public/default',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        origin: 'http://localhost:7080',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-    }
-  );
 
-  if (!response.ok) {
-    const errorMessage = await response.text();
-    console.log('Error retrieving topics:', response.status, errorMessage);
-    return;
-  }
 
-  const data = await response.json();
-  const topics = data.topics;
+// const App = () => {
+//   // const grafport: string | number = process.env.GRAFPORT ?? 2999;
+//   // console.log(grafport);
+//   // console.log('hello I am in app')
+//   // (async function getGraf () {
+//   //   console.log('in app.tsx')
+//   //   const data = await fetch('/grafport');
+//   //   const result = await data.text();
+//   //   console.log(result)
 
-  console.log('Topics:', topics);
-}
+//   // .then(data => {
+//   //   console.log(data)
+//   // });
 
-getTopics();
-
-const App = () => {
-  // const grafport: string | number = process.env.GRAFPORT ?? 2999;
-  // console.log(grafport);
-  // console.log('hello I am in app')
-  // (async function getGraf () {
-  //   console.log('in app.tsx')
-  //   const data = await fetch('/grafport');
-  //   const result = await data.text();
-  //   console.log(result)
-
-  // .then(data => {
-  //   console.log(data)
-  // });
-
-  // console.log(grafport.json())
-  // })();
-    (async function getGraf () {
-    console.log('in app.tsx')
-    const data = await fetch('http://localhost:8080/admin/v2/persistent/public/default', {
-      mode: 'no-cors'
-    })
-    const result = await data.text();
-    console.log('result', result)
+//   // console.log(grafport.json())
+//   // })();
+//     (async function getGraf () {
+//     console.log('in app.tsx')
+//     const data = await fetch('http://localhost:8080/admin/v2/persistent/public/default', {
+//       mode: 'no-cors'
+//     })
+//     const result = await data.text();
+//     console.log('result', result)
     
-    // .then(data => {
-    //   console.log(data)
-    // });
+//     // .then(data => {
+//     //   console.log(data)
+//     // });
     
-    // console.log(grafport.json())
-  })();
+//     // console.log(grafport.json())
+//   })();
   // console.log('hello')
   return (
     <div className='app-display'>
