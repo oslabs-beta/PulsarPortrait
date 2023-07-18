@@ -17,7 +17,7 @@ export default function Display() {
   }
 
   return (
-    <div className='DisplayContainer'>
+    <div className='display-container'>
       {graphArr}
     </div>
   )
