@@ -17,9 +17,13 @@ export default function GraphData() {
     jettyrequesttime:
       'http://localhost:2222/d/e11221ec-7d82-47ec-a3b1-5356e4f63c6b/jettyrequesttime?orgId=1&refresh=5s&viewPanel=1&kiosk',
     throughputIn:
-    'http://localhost:2222/d/bdfb696f-55e4-46da-aa3d-381b5cf2f408/throughputin?orgId=1&refresh=5s&viewPanel=1&kiosk',
+      'http://localhost:2222/d/bdfb696f-55e4-46da-aa3d-381b5cf2f408/throughputin?orgId=1&refresh=5s&viewPanel=1&kiosk',
     throughputOut:
-    'http://localhost:2222/d/b1f5eb24-9c75-4ba3-a40b-7bf8e1ccdc94/throughtputout?orgId=1&refresh=5sviewPanel=1&kiosk'
+      'http://localhost:2222/d/b1f5eb24-9c75-4ba3-a40b-7bf8e1ccdc94/throughtputout?orgId=1&refresh=5sviewPanel=1&kiosk',
+    messageRateIn:
+      'http://localhost:2222/d/a9961e9a-b44a-42c1-a855-427e3825b04c/broker-rate-in?orgId=1&refresh=5s&viewPanel=1&kiosk',
+    messageRateOut:
+      'http://localhost:2222/d/b9031b09-082f-4dc6-9b82-766c5e543328/message-rate-out?orgId=1&refresh=5s&viewPanel=1&kiosk',
   };
   return { graphData };
 }
