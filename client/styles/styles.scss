@@ -94,21 +94,50 @@ body {
 
 }
 
+// .display-container {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     // height: 90vh;
+//     gap: 1rem;
+//     border-radius: 5px;
+//     padding-left: 3rem;
+//     padding-right: 3rem;
+//     padding-top: 2rem;
+//     padding-bottom: 1rem;
+//     // border: 2px solid pink;
+// }
+
 .display-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    width: 100%;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
     // height: 90vh;
-    gap: 1rem;
+    // gap: 1rem;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: repeat(6, 1fr);
     border-radius: 5px;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    // padding-left: 3rem;
+    // padding-right: 3rem;
+    // padding-top: 2rem;
+    // padding-bottom: 1rem;
     // border: 2px solid pink;
 }
 
+
+
+.graph-container {
+    border: 1px solid red;
+    position: relative;
+    // width: 100%;
+}
 // .Graph {
 //     // background-color: maroon;
 //     // display: flex;
@@ -150,15 +179,28 @@ body {
     // height: 20vh;
     // width: 90vw;
     height: 270px;
-    width: 55rem;
+    // width: 55rem;
+    width: 100%;
     border-radius: 8px;
     overflow: hidden;
 }
-@media screen and (max-width: 2012.5px) {
-    .chart {
-       width: 90vw;
-    }
-  }
+// @media screen and (max-width: 2012.5px) {
+//     // .chart {
+//     //    width: 90vw;
+//     // }
+//   }
+
+@media screen and (max-width: 1000px) {
+        // .chart {
+        //    width: 90vw;
+        // }
+        .display-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+
+        }
+
+      }
 #fade-button {
     background-color: rgba(85, 85, 86, 0.775);
     color: white

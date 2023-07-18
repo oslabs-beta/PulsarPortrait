@@ -19,7 +19,7 @@ export default function GraphData() {
     throughputIn:
       'http://localhost:2222/d/bdfb696f-55e4-46da-aa3d-381b5cf2f408/throughputin?orgId=1&refresh=5s&viewPanel=1&kiosk',
     throughputOut:
-      'http://localhost:2222/d/b1f5eb24-9c75-4ba3-a40b-7bf8e1ccdc94/throughtputout?orgId=1&refresh=5sviewPanel=1&kiosk',
+      'http://localhost:2222/d/b1f5eb24-9c75-4ba3-a40b-7bf8e1ccdc94/throughtputout?orgId=1&refresh=5s&viewPanel=1&kiosk',
     messageRateIn:
       'http://localhost:2222/d/a9961e9a-b44a-42c1-a855-427e3825b04c/broker-rate-in?orgId=1&refresh=5s&viewPanel=1&kiosk',
     messageRateOut:
