@@ -28,7 +28,7 @@ export default function Graph({ index }) {
   const [url, setUrl] = useState<string>(graphDataArray[index]);
 
   return (
-    <div id='graph-container1'>
+    <div className='graph-container'>
       <GraphMenu name={name} setUrl={setUrl} setName={setName} url={url} />
       <iframe className='chart' src={url} frameBorder='0'></iframe>
     </div>

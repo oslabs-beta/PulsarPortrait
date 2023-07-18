@@ -23,7 +23,7 @@ import Navbar from './client/components/Navbar';
 // }
 
 
-// const App = () => {
+const App = () => {
 //   // const grafport: string | number = process.env.GRAFPORT ?? 2999;
 //   // console.log(grafport);
 //   // console.log('hello I am in app')
