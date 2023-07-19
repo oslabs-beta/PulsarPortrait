@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./client/assets/pulsarLogoSVG.svg" alt="logo" width="400"/>
+<img src="./client/assets/pulsarLogo.png" alt="logo" width="350"/>
 </p>
 
 # PulsarPortrait
