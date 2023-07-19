@@ -51,8 +51,8 @@ services:
       - prometheus
 
   pulsarportrait:
-    image: pulsarportrait
-    # image: pulsarportrait/webapp
+    # image: pulsarportrait
+    image: pulsarportrait/webapp
     container_name: pulsarportrait
     networks:
       - pulsar-network
