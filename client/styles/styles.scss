@@ -46,11 +46,11 @@ body {
     align-items: center;
     height: 100%;
     // min-height: 100%;
-    border: 1px solid pink;
+    // border: 1px solid pink;
 }
 .app-display {
     // margin: 2.5rem;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     display: flex;
     flex-direction: row;
     // border: 1px solid black;
@@ -103,7 +103,7 @@ body {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-radius: 5px;
-    border: 1px solid green;
+    // border: 1px solid green;
 
 }
 
@@ -148,9 +148,10 @@ body {
 
 
 .graph-container {
-    border: 1px solid red;
+    // border: 1px solid red;
     position: relative;
-    padding: 1rem;
+    // padding: 1rem;
+    padding: .5rem;
     // width: 100%;
 }
 // .Graph {
@@ -221,13 +222,33 @@ body {
         .app-display {
             // height: 100%;
             // margin-top: 10px;
-            // min-height: 1600px
+            min-height: 1600px
         }
-        // #root {
-        //     height: 100vh;
-        // }
+        #root {
+            // height: 100vh;
+            min-height: 2000px;
+        }
 
       }
+
+    //   @media screen and (min-width: 2000px) {
+    //     .graph-container {
+    //         padding: 20rem;
+    //         background-color: aqua;
+    //     }
+    //   }
+
+
+
+
+
+      .graph-container {
+        // border: 1px solid red;
+        position: relative;
+        // padding: 1rem;
+        padding: .5rem;
+        // width: 100%;
+    }
 #fade-button {
     background-color: rgba(85, 85, 86, 0.775);
     color: white
