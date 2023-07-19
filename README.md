@@ -1,6 +1,14 @@
 # (Pulsar Portrait Logo)
 
-## Built with
+**Table of Contents**
+
+- [About](#about)
+- [Getting Started](#getting-started)
+- [Contributions](#contributions)
+- [Authors](#authors)
+
+## About
+#### Built with
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -16,7 +24,7 @@
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![Apache Pulsar Badge](https://img.shields.io/badge/Apache%20Pulsar-188FFF?logo=apachepulsar&logoColor=fff&style=for-the-badge)
 
-## Pulsar Portrait
+#### Pulsar Portrait
 
 Description
 
@@ -36,7 +44,7 @@ prometheus:
     - '9090:9090'
 
 pulsarportrait:
-  image: pulsarportrait/webapp:latest
+  image: pulsarportrait/app:latest
   container_name: pulsarportrait
   networks:
     - pulsar
@@ -56,15 +64,33 @@ grafana:
 
 ### Option 2 - Fork this repo
 
-- Fork this repo
+- Fork and clone this repo
 - Start your Pulsar culster
-- In this repo,
+- In this repo, add your Pulsar cluster's network to the compose.yml file, if you are unsure of the name of your network, you can run 
+```bash
+docker network ls
+```
+- Lastly, run
+```bash
+docker compose up -d
+```
+PulsarPortrait will be available on http://localhost:3333/
 
-## How to Contribute
+## Contributions
+We welcome contributions
+To contribute, please follow these steps
+- Fork and clone this repo
+- Create your feature branch by running
+```zsh
+git checkout -b your-feature-branch-name
+```
+- Add, commit, and push your changes up to GitHub
+- Lastly, make a pull request detailing your changes
+
 
 ## Authors
 
 - Grant Thomas [GitHub](https://github.com/GrantCT) | [LinkedIn](https://www.linkedin.com/in/grantcthomas/)
 - Cyrux Lam [GitHub](https://github.com/cyduckk) | [LinkedIn](https://www.linkedin.com/in/cyrux-lam/)
-
+- Anthony Le [GitHub](https://github.com/anthonyle910) | [LinkedIn](https://www.linkedin.com/in/anthony-le-616b4b101/)
 - Jordan Zolman [Github](https://github.com/PrincePuggo) | [LinkedIn](https://www.linkedin.com/in/jordanzolman)
