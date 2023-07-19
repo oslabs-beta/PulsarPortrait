@@ -30,17 +30,42 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
     const { id } = e.target;
     let temp;
 
-    if (id === data['messagesIn']) {
-      temp = 'messagesIn';
-    } else if (id === data['messagesOut']) {
-      temp = 'messagesOut';
-    } else if (id === data['backlog']) {
-      temp = 'backlog';
-    } else if (id === data['activeConnections']) {
-      temp = 'activeConnections';
-    } else {
-      temp = 'memoryUsage';
+    switch(id) {
+      case data['activeConnections']: temp = 'active Connections';
+      break;
+      case data['backlog']: temp = 'backlog';
+      break;
+      case data['jettyrequesttime']: temp = 'jetty request time';
+      break;
+      case data['memoryUsage']: temp = 'memory Usage';
+      break;
+      case data['messagesIn']: temp = 'messages In';
+      break;
+      case data['messagesOut']: temp = 'messages Out';
+      break;
+      case data['messageRateIn']: temp = 'message Rate In';
+      break;
+      case data['messageRateOut']: temp = 'message Rate Out';
+      break;
+      case data['throughputIn']: temp = 'throughput In';
+      break;
+      case data['throughputOut']: temp = 'throughput Out';
+      break;
+      case data['topicsAndSubscriptions']: temp = 'topics And Subscriptions';
+      break;
     }
+
+    // if (id === data['messagesIn']) {
+    //   temp = 'messagesIn';
+    // } else if (id === data['messagesOut']) {
+    //   temp = 'messagesOut';
+    // } else if (id === data['backlog']) {
+    //   temp = 'backlog';
+    // } else if (id === data['activeConnections']) {
+    //   temp = 'activeConnections';
+    // } else {
+    //   temp = 'memoryUsage';
+    // }
     console.log({ id });
     setUrl(id);
     setName(temp);
@@ -76,26 +101,23 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
           },
         }}
       >
+        <MenuItem onClick={changeGraph} id={data['activeConnections']}>
+          Active Connections
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['backlog']}>
+          Backlog
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['jettyrequesttime']}>
+          Jetty Request Time
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['memoryUsage']}>
+          Memory Usage
+        </MenuItem>
         <MenuItem onClick={changeGraph} id={data['messagesIn']}>
           Messages In
         </MenuItem>
         <MenuItem onClick={changeGraph} id={data['messagesOut']}>
           Messages Out
-        </MenuItem>
-        <MenuItem onClick={changeGraph} id={data['backlog']}>
-          Backlog
-        </MenuItem>
-        <MenuItem onClick={changeGraph} id={data['activeConnections']}>
-          Active Connections
-        </MenuItem>
-        <MenuItem onClick={changeGraph} id={data['memoryUsage']}>
-          Memory Usage
-        </MenuItem>
-        <MenuItem onClick={changeGraph} id={data['topicsAndSubscriptions']}>
-          Topics and Subscriptions
-        </MenuItem>
-        <MenuItem onClick={changeGraph} id={data['jettyrequesttime']}>
-          Jetty Request Time
         </MenuItem>
         <MenuItem onClick={changeGraph} id={data['messageRateIn']}>
           Message Rate In
@@ -108,6 +130,9 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
         </MenuItem>
         <MenuItem onClick={changeGraph} id={data['throughputOut']}>
           Throughput out
+        </MenuItem>
+        <MenuItem onClick={changeGraph} id={data['topicsAndSubscriptions']}>
+          Topics and Subscriptions
         </MenuItem>
       </Menu>
     </div>
