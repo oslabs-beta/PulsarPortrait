@@ -5,13 +5,6 @@
 # PulsarPortrait
 https://pulsarportrait.io/
 
-<!-- **Table of Contents**
-
-- [About](#about)
-- [Getting Started](#getting-started)
-- [Contributions](#contributions)
-- [Authors](#authors) -->
-
 ## About
 
 <div align="center" width="100%">
@@ -34,7 +27,6 @@ https://pulsarportrait.io/
 
 PulsarPortrait is an open-source application that illustrates the current health of your Pulsar cluster. By scraping data from Prometheus metrics, the app can display a variety of graphs, gauges, and counters. From message data to jetty response times, users can choose from eleven visualizations and frame them in any of the six display slots.
 
-<!-- ![ppdemogif](./client/assets/ppdemogif.gif) -->
 <p align="center">
 <img src="./client/assets/ppdemogif.gif"/>
 </p>

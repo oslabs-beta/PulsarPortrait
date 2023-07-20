@@ -2,51 +2,16 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3333;
-// const frameguard = require('frameguard');
-// parse incoming json requests
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true }));
-// app.use(frameguard({ action: "SAMEORIGIN" }));
-// app.use(frameguard({
-//   action: 'allow-from',
-//   domain: 'ALLOWALL'
-// }))
-// NOTE: `ALLOW-FROM` is not supported in most browsers.
-// app.use((req, res, next) => {
-//   res.setHeader("X-Frame-Options", "ALLOW-FROM http://localhost:2222");
-//   next();
-// });
-// app.use((req, res, next) => {
-//   res.setHeader("Content-Security-Policy", "frame-ancestors 'self' http://localhost:2222");
-//   next();
-// });
 
-// statically serve the build folder
-// app.use('/dist', express.static(path.join(__dirname, '../dist')));
-
-// app.use(express.static('client'));
-// app.use(express.static('dist'));
+// statically serve the dist and client folder
 app.use(express.static(path.join(__dirname, '../dist')));
 app.use(express.static(path.join(__dirname, '../client')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
-
-// app.get('/grafport', (req, res) => {
-// console.log('in grafportback')
-// console.log(process.env.GRAFPORT)
-// res.status(200).send(process.env.GRAFPORT || '2222');
-// })
-
-// Handle preflight requests
-//   if (req.method === 'OPTIONS') {
-//     res.sendStatus(200);
-//   } else {
-//     next();
-//   }
-// ;
 
 //route error handler
 app.use((req, res) =>
