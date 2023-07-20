@@ -99,3 +99,8 @@ git checkout -b your-feature-branch-name
 - Cyrux Lam [GitHub](https://github.com/cyduckk) | [LinkedIn](https://www.linkedin.com/in/cyrux-lam/)
 - Anthony Le [GitHub](https://github.com/anthonyle910) | [LinkedIn](https://www.linkedin.com/in/anthony-le-616b4b101/)
 - Jordan Zolman [Github](https://github.com/PrincePuggo) | [LinkedIn](https://www.linkedin.com/in/jordanzolman)
+
+<br>
+
+## License
+- PulsarPortrait is MIT Licensed
