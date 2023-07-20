@@ -1,50 +1,35 @@
 version: '3'
 networks:
-  network1:
-    name: justcluster_pulsar
+  pulsar-network:
+    # Write the name of your pulsar-network here
+    name: 
     external: true
 
 services:
   prometheus:
-    # image: pulsarprom:latest
-    #
-    image: grantcthomas/pulsarproto:latest
+    image: pulsarportrait/prometheus:latest
     container_name: prometheus
     networks:
-      - network1
+      - pulsar-network
     ports:
-      - "9090:9090"
-    # environment:
-    #   - PULSAR_BROKER_PORT=6666
+      - '9090:9090'
     volumes:
       - ./imageConfigs/prometheus/promData:/prometheus
 
   grafana:
-    image: grafana/grafana:latest
+    image: pulsarportrait/grafana:latest
     container_name: grafana
     networks:
-      - network1
+      - pulsar-network
     ports:
       - "2222:3000"
-    environment:
-      GF_PATHS_CONFIG: /etc/grafana/grafana.ini
-      GF_AUTH_ANONYMOUS_ENABLED: 'true'
-
-    volumes:
-      - ./imageConfigs/grafana/data:/var/lib/grafana
-      - ./imageConfigs/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
-      - ./imageConfigs/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
-      - ./imageConfigs/grafana/grafana.ini:/etc/grafana/grafana.ini
-
     depends_on:
       - prometheus
 
   pulsarportrait:
-    image: pulsarportrait
-    container_name: pp
+    image: pulsarportrait/app:latest
+    container_name: pulsarportrait
+    networks:
+      - pulsar-network
     ports:
       - '3333:3333'
-    
-    # volumes:
-      # - /var/run/docker.sock:/var/run/docker.sock
-    # command: npm start

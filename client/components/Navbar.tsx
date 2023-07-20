@@ -5,10 +5,10 @@ import {AiOutlineInfoCircle} from 'react-icons/ai';
 
 export default function Navbar() {
   return (
-    <div className='navbar'>
-      <a href='http://localhost:7080'><AiOutlineHome id='HomeButton' className='NavButtons' size={40}/></a>
-      <a><FiSettings size={30} className='NavButtons'/></a>
-      <a><AiOutlineInfoCircle size={35} className='NavButtons'/></a>
+    <div className='navbar-content'>
+      <a href='http://localhost:3333'><AiOutlineHome id='home-button' className='nav-buttons' size={40}/></a>
+      <a><FiSettings size={30} className='nav-buttons'/></a>
+      <a><AiOutlineInfoCircle size={35} className='nav-buttons'/></a>
     </div>
   )
 }

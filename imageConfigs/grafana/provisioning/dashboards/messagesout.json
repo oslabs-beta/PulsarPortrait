@@ -122,7 +122,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -142,7 +142,7 @@
           "refId": "A"
         }
       ],
-      "title": "Messages Out",
+      "title": "       ",
       "transparent": true,
       "type": "timeseries"
     }
@@ -162,6 +162,6 @@
   "timezone": "",
   "title": "messagesout",
   "uid": "b7cc76a7-51f0-4175-bbbc-dada7ec3fa2d",
-  "version": 8,
+  "version": 12,
   "weekStart": ""
 }

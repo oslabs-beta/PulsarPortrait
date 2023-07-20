@@ -30,7 +30,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "fixedColor": "dark-purple",
+            "mode": "fixed"
           },
           "custom": {
             "axisCenteredZero": false,
@@ -91,7 +92,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -111,7 +112,7 @@
           "refId": "A"
         }
       ],
-      "title": "Message Backlog",
+      "title": "       ",
       "transparent": true,
       "type": "timeseries"
     }
@@ -131,6 +132,6 @@
   "timezone": "",
   "title": "newbacklog",
   "uid": "d20d409b-6974-4ca4-b16c-fc74c6aa7cd1",
-  "version": 4,
+  "version": 9,
   "weekStart": ""
 }
