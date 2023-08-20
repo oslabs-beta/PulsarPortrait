@@ -1,13 +1,17 @@
 import React from 'react';
 import GraphMenu from './GraphMenu';
 import { useState } from 'react';
-import GraphData from './GraphData';
+import GraphData from '../GraphData';
+import { URLS } from '../types';
 
-export default function Graph({ index }) {
-  const result = GraphData();
-  const data = result.graphData;
+type GraphProps = {
+  index: number;
+}
 
-  const graphDataArray = [
+export default function Graph({ index }: GraphProps) {
+  const data: URLS = GraphData;
+
+  const graphDataArray: string[] = [
     data['messagesIn'],
     data['messagesOut'],
     data['backlog'],
@@ -15,7 +19,7 @@ export default function Graph({ index }) {
     data['memoryUsage'],
     data['topicsAndSubscriptions'],
   ];
-  const graphNameArray = [
+  const graphNameArray: string[] = [
     'Messages In',
     'Messages Out',
     'Backlog',
@@ -29,11 +33,8 @@ export default function Graph({ index }) {
 
   return (
     <div className='graph-container'>
-      <GraphMenu name={name} setUrl={setUrl} setName={setName} url={url} />
+      <GraphMenu name={name} setUrl={setUrl} setName={setName} />
       <iframe className='chart' src={url} frameBorder='0'></iframe>
     </div>
   );
-}
-{
-  /* <iframe className='chart'src="http://localhost:3000/d/f849b578-124a-4e19-a781-12d838580e64/messagein?orgId=1&refresh=5s&viewPanel=1&kiosk"  frameBorder="0" ></iframe> */
 }
