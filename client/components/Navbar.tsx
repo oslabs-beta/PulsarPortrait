@@ -1,14 +1,15 @@
 import React from 'react'
-import {AiOutlineHome} from 'react-icons/ai';
-import {FiSettings} from 'react-icons/fi';
-import {AiOutlineInfoCircle} from 'react-icons/ai';
+import HomeIcon from '@mui/icons-material/Home';
+import SettingsIcon from '@mui/icons-material/Settings';
+import InfoIcon from '@mui/icons-material/Info';
+import { Button } from '@mui/material';
 
 export default function Navbar() {
   return (
     <div className='navbar-content'>
-      <a href='http://localhost:3333'><AiOutlineHome id='home-button' className='nav-buttons' size={40}/></a>
-      <a><FiSettings size={30} className='nav-buttons'/></a>
-      <a><AiOutlineInfoCircle size={35} className='nav-buttons'/></a>
+      <Button size='medium' color='secondary' href='http://localhost:3333' variant='contained' startIcon={<HomeIcon/>} sx={{mt:'12px',width: '80%', fontSize: '.7em'}}>Home</Button>
+      <Button size='medium' color='secondary' variant='contained' startIcon={<SettingsIcon/>} sx={{mt: '12px',width: '80%', fontSize: '.5em'}}>Settings</Button>
+      <Button size='medium' color='secondary' variant='contained' startIcon={<InfoIcon/>} sx={{mt: '12px', width: '80%', fontSize: '.5em'}}>About</Button>
     </div>
   )
 }

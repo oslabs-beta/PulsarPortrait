@@ -4,29 +4,33 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import GraphData from './GraphData';
+import GraphData from '../GraphData';
 import { useState } from 'react';
+import { URLS } from '../types';
 
-export default function GraphMenu({ name, setName, setUrl, url }) {
-  const result = GraphData();
-  const data = result.graphData;
 
-  // const messages_in_url = "http://localhost:3000/d/c2ef0e4a-da28-4797-bd86-5c1957aa9039/newmessagesin?orgId=1&refresh=5s&viewPanel=1&viewPanel=1&kiosk";
-  // const messages_out_url = "http://localhost:3000/d/b7cc76a7-51f0-4175-bbbc-dada7ec3fa2d/messagesout?orgId=1&refresh=5s&viewPanel=1&kiosk";
-  // const backlog = "http://localhost:3000/d/d20d409b-6974-4ca4-b16c-fc74c6aa7cd1/newbacklog?orgId=1&refresh=5s&viewPanel=1&kiosk";
+interface GraphMenuProps {
+  name: string;
+  setName: Function;
+  setUrl: Function
+}
 
+export default function GraphMenu({ name, setName, setUrl}: GraphMenuProps) {
+
+  const data: URLS = GraphData//GraphData();
+ 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const open: boolean = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     setAnchorEl(null);
   };
 
-  const changeGraph = (e) => {
+  const changeGraph = (e: React.BaseSyntheticEvent) => {
     const { id } = e.target;
     let temp;
 
@@ -55,18 +59,6 @@ export default function GraphMenu({ name, setName, setUrl, url }) {
       break;
     }
 
-    // if (id === data['messagesIn']) {
-    //   temp = 'messagesIn';
-    // } else if (id === data['messagesOut']) {
-    //   temp = 'messagesOut';
-    // } else if (id === data['backlog']) {
-    //   temp = 'backlog';
-    // } else if (id === data['activeConnections']) {
-    //   temp = 'activeConnections';
-    // } else {
-    //   temp = 'memoryUsage';
-    // }
-    console.log({ id });
     setUrl(id);
     setName(temp);
     setAnchorEl(null);

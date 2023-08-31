@@ -14,4 +14,4 @@ ENV PORT=3333
 
 EXPOSE 3333
 
-ENTRYPOINT ["node", "./server/server.js"]
+ENTRYPOINT ["node", "./server/server.ts"]

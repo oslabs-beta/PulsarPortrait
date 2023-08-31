@@ -5,10 +5,10 @@
         "removeComments": true,
         "jsx": "react",
         "allowJs": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "strictNullChecks": false
     },
-    "include": ["client/**/*", "index.tsx"]
+    "include": ["client/**/*", "index.tsx", "server/server.ts"]
 }
