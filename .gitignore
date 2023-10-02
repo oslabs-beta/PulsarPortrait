@@ -4,3 +4,4 @@ dist
 /imageConfigs/grafana/data
 /imageConfigs/prometheus/promData
 oggrafdata/
+.DS_Store
